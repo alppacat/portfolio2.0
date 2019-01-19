@@ -1,0 +1,116 @@
+.home {
+    height: 100vh;
+    background: radial-gradient(
+        circle at bottom,
+        rgb(139, 0, 91, 0.9),
+        rgb(96, 26, 85, 0.9),
+        rgb(58, 29, 69, 0.9),
+        rgb(30, 24, 44, 0.9),
+        rgb(12, 12, 14, 0.9)
+      )
+}
+
+.title{
+    color: #d90474;
+    text-shadow: 2px 2px #00bfa8;
+    font-size: 10em;
+    margin: 0;
+    font-weight: 900;
+    font-family: "VT323", monospace;
+    padding-top: .5em;
+}
+
+.subtitle {
+    margin-top: -.5em;
+    font-size: 3em;
+    font-family: "Space Mono", monospace !important;
+    color: #00bfa8;
+    text-shadow: 2px 2px #d90474;
+    font-weight: bolder;
+}
+.container{
+    text-align: center;
+}
+#quote {
+    font-family: "Space Mono", monospace !important;
+    color: #008b68;
+    text-shadow: none;
+    margin-bottom: 6em;
+    margin-top: 3em;
+}
+#scrolldown {
+    font-family: "VT323", monospace;
+    color: #d90474;
+    text-shadow: 2px 2px #00bfa8;
+    margin-top: 3em;
+  
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #7794ff, #44107a, #ff1361, #fff800);
+    -webkit-animation: 0.8s shake infinite alternate;
+    animation: 0.8s shake infinite alternate;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: skewX(-15deg);
+    }
+    5% {
+      transform: skewX(15deg);
+    }
+    10% {
+      transform: skewX(-15deg);
+    }
+    15% {
+      transform: skewX(15deg);
+    }
+    20% {
+      transform: skewX(0deg);
+    }
+    100% {
+      transform: skewX(0deg);
+    }
+  }
+
+  #press-to-enter{
+    padding: 1em;
+    font-size: 1.5em;
+    background-image: linear-gradient(0deg,#e3b943,#e3ca4b,#e2dc56,#deed63,#d9ff74);
+    box-shadow: 1px 3px #d90474;
+    border-radius: 1.6em;
+    font-weight: bolder;
+    color: #3f1942;
+    text-decoration: none;
+    font-family: VT323,monospace;
+    text-shadow: 2px 2px #00bfa8;
+  }
+
+  @media screen and (max-width: 768px){
+.title {
+    font-size:  7em;
+    padding-top: .2em;
+}
+.subtitle{
+    font-size: 1.5em;
+}
+}
+@media (max-width: 359px){
+    .title {
+        font-size:  5em;
+        padding-top: 0;
+    }
+    .subtitle{
+        font-size: 1.2em;
+    }
+}
