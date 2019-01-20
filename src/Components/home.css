@@ -7,10 +7,12 @@
         rgb(58, 29, 69, 0.9),
         rgb(30, 24, 44, 0.9),
         rgb(12, 12, 14, 0.9)
-      )
+      ), url('../assets/30577992388_b5e447777e_o.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.title{
+.title-home{
     color: #d90474;
     text-shadow: 2px 2px #00bfa8;
     font-size: 10em;
@@ -94,6 +96,19 @@
     text-decoration: none;
     font-family: VT323,monospace;
     text-shadow: 2px 2px #00bfa8;
+  }
+
+  #press-to-enter:hover{
+    cursor: pointer;
+    color: #3f1942;
+    background-image: linear-gradient(
+      to bottom,
+      #e3b943,
+      #e3ca4b,
+      #e2dc56,
+      #deed63,
+      #d9ff74
+    );
   }
 
   @media screen and (max-width: 768px){

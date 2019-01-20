@@ -26,7 +26,7 @@ class Home extends Component {
         return ( 
         <section className="home">
             <div className="container">
-            <h1 className="title"> 
+            <h1 className="title title-home"> 
             <Typewriter
               onInit={typewriter => {
                 typewriter

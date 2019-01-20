@@ -1,0 +1,70 @@
+#desktop{
+    background-color: #3A1D45;
+    height: 100vh;
+    /* width: 100vw; */
+}
+
+#console{
+    background-color: #18181C;
+    width: 66%;
+    border: 2px solid #d6d6d6;
+    border-radius: 15px 15px 15px 15px;
+}
+#nav-console {
+    background-color: #d6d6d6;
+    padding: .6em;
+    border-radius: 12px 12px 0 0;
+}
+.options-colors{
+    background-color: #780855;
+    padding: .3em;
+    border-radius: .6em;
+}
+
+.console-title {
+    color: #d6d6d6;
+    font-family: "VT323", monospace;
+    font-size: 1.2em;
+    margin-left: .6em;
+}
+
+p.level-right.console-x {
+    background-color: #d6d6d6;
+    padding: 0em .6em 0em .6em;
+    font-family: "VT323", monospace;
+    font-weight: bolder;
+    margin-right: .5em;
+}
+.console-body-about {
+    color: #008b68;
+    text-align: start;
+    padding: 2em;
+}
+
+.console-body-about p{
+    margin: 1em;
+    text-align:justify;
+}
+.console-body h1{
+    font-size: 3.6em;
+    font-family: "VT323", monospace;
+}
+.console-body{
+    color: #008b68;
+
+}
+.console-body-skills{
+    display: flex;
+}
+h3.title{
+    font-family: VT323,monospace;
+    color: #008b68;
+}
+.console-body-contact section {
+    margin-top: -3em;
+}
+
+.console-body-contact span{
+    color: #00bfa8;
+    font-weight: bolder;
+}
