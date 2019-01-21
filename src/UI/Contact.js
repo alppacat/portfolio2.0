@@ -2,7 +2,7 @@ import React from 'react';
 
 import Console from './Console'
 
-const Contact = () => {
+const Contact = (props) => {
     const name = "Contacto";
     const body = () => {
         return(
@@ -18,18 +18,18 @@ const Contact = () => {
                 <ul>
                     <li className="list-items">
                         <a href="mailto:tzupratts@gmail.com"> 
-                        <i class="fas fa-envelope"/>{" "}
+                        <i className="fas fa-envelope"/>{" "}
                         tzupratts@gmail.com</a>
                     </li>
                     <li className="list-items">
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/tzupratts/">
-                    <i class="fab fa-linkedin" />{" "}
+                    <i className="fab fa-linkedin" />{" "}
                     @tzupratts
                     </a>
                     </li>
                     <li className="list-items">
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/alppacat">
-                    <i class="fab fa-github" />{" "}
+                    <i className="fab fa-github" />{" "}
                      @alppacat
                     </a>
                     </li>
@@ -40,7 +40,7 @@ const Contact = () => {
         )
 
     }
-    return (<Console name={name} body={body()}/>)
+    return (<Console name={name} body={body()} switch={props.switch} component={props.component}/>)
 }
 
 export default Contact;

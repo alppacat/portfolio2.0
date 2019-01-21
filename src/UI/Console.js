@@ -9,7 +9,8 @@ const Console = (props) => {
             <div id="nav-console" >
                 <div className="level options-colors">
                  <p className="level-left console-title">{props.name}.exe</p>
-                 <p className="level-right console-x">X</p>
+                 <p  onClick={props.switch} className="level-right console-x"
+                  data-component={props.component}>X</p>
                 </div>
             </div>
             <div className="console-body">

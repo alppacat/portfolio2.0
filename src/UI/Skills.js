@@ -2,7 +2,7 @@ import React from 'react';
 
 import Console from './Console'
 
-const Skills = () => {
+const Skills = (props) => {
     const name = "Habilidades";
 
     const body = () =>{
@@ -69,7 +69,7 @@ const Skills = () => {
         )
     }
 
-    return (<Console name={name} body={body()} />)
+    return (<Console name={name} body={body()} switch={props.switch} component={props.component}/>)
 }
 
 export default Skills;

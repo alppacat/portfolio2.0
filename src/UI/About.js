@@ -18,9 +18,8 @@ const About = (props) => {
 
         )
     }
-
     return(
-        <Console name={name} body={body()}/>
+        <Console name={name} body={body()} switch={props.switch} component={props.component}/>
     )
 }
 

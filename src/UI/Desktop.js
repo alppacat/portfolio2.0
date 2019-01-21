@@ -1,13 +1,33 @@
 import React from 'react';
 import './Desktop.css'
 
+import consoleIcon from '../assets/icons/console_prompt-0.png';
 
-import About from './About'
 
 const Desktop = (props) => {
     return(
         <section id="desktop">
-            <div className="container">
+            <div className="container-desktop">
+            <section id="desktop-icons">
+                <figure className="desktop-icons-content">
+                    <img src={consoleIcon} 
+                    onClick={props.switch}
+                    data-component="About"/>
+                    <p>about.exe</p>
+                </figure>
+                <figure className="desktop-icons-content">
+                    <img src={consoleIcon}
+                    onClick={props.switch} 
+                    data-component="Skills"/>
+                    <p>skills.exe</p>
+                </figure>
+                <figure className="desktop-icons-content">
+                    <img src={consoleIcon}
+                     onClick={props.switch}
+                     data-component="Contact"/>
+                    <p>contact.exe</p>
+                </figure>
+            </section>
             {props.component}
             </div>        
          </section>
