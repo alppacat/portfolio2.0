@@ -108,3 +108,13 @@ figure.desktop-icons-content {
 .container-desktop{
     margin:0;
 }
+.container-images{
+    display: flex;
+}
+.images-project{
+    width: 80%;
+}
+#projects{
+    position: absolute;
+    z-index: 1;
+}

@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 
-import About from '../UI/About'
-import Skills from '../UI/Skills'
-import Contact from '../UI/Contact'
-import DesktopUI from '../UI/Desktop' 
+import About from '../UI/About';
+import Skills from '../UI/Skills';
+import Contact from '../UI/Contact';
+import Projects from '../UI/Projects';
+import DesktopUI from '../UI/Desktop';
 
 
 class Desktop extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            About:true,
+            About:false,
             Skills:false,
             Contact: false,
+            Projects: true,
          }
     }
 
     switchComponent = (event) => {
         const component = event.target.getAttribute('data-component')
-        console.log(component)
 
         if(this.state[component]){
             return this.setState({[component]:false})
@@ -26,11 +27,8 @@ class Desktop extends Component {
             const state = this.state
             const eachState = Object.entries(state)
             eachState.forEach((element) =>{
-                // console.log(element[0], element[1])
                 if(element[1]){
-                    console.log(element[1], element[0])
                     const componentEach = element[0];
-                    const componentState = element[1]
                     return this.setState({[component]:true, [componentEach]:false})
                 }else{
                     return this.setState({[component]:true})
@@ -56,6 +54,8 @@ class Desktop extends Component {
             return <Skills switch={this.switchComponent} component={"Skills"}/>
         }else if(ConsoleType === "Contact"){
             return <Contact switch={this.switchComponent} component={"Contact"}/>
+        }else if(ConsoleType === "Projects"){
+            return <Projects switch={this.switchComponent} component={"Contact"}/>
         }
     }
     render() { 
