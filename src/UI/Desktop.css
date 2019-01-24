@@ -108,13 +108,113 @@ figure.desktop-icons-content {
 .container-desktop{
     margin:0;
 }
-.container-images{
+.container-projects{
     display: flex;
+    justify-content: center
 }
 .images-project{
-    width: 80%;
+    width: 40%;
+}
+.main-project img {
+    width: 20%;
 }
 #projects{
     position: absolute;
     z-index: 1;
 }
+.container-images{
+    text-align: center;
+}
+
+.container-projects-info{
+    text-align: center;
+    max-width: 50%;
+    height: 13em;
+    background-color: #18181C;
+    color: #008b68;
+    border: 2px solid #d6d6d6;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1.2em;
+}
+.container-projects-info h3{
+    font-family: VT323,monospace;
+    font-size: 2em;
+    color: #00bfa8;
+
+}
+
+.container-projects-info p{
+    margin: .5em;
+    font-size: .8em;
+}
+.external-links a{
+    text-decoration: none;
+    color: #00bfa8;
+    margin: 1em;
+}
+
+.next-container{
+    display: flex;
+    justify-content: center;
+    margin-top: -2em;
+}
+.next-icon{
+    font-family: "VT323", monospace;
+    color: #008b68;
+    text-shadow: 2px 2px #d90474;;  
+    font-size: 6em;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #7794ff, #44107a, #ff1361, #fff800);
+    -webkit-animation: 0.8s shake infinite alternate;
+    animation: 0.8s shake infinite alternate;
+}
+.next-icon:hover{
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% {
+      transform: skewX(-15deg);
+    }
+    5% {
+      transform: skewX(15deg);
+    }
+    10% {
+      transform: skewX(-15deg);
+    }
+    15% {
+      transform: skewX(15deg);
+    }
+    20% {
+      transform: skewX(0deg);
+    }
+    100% {
+      transform: skewX(0deg);
+    }
+  }
+
+  .side-project-left{
+    margin-right: -30em;
+    width: 30%;
+  }
+  .side-project-right{
+    margin-left: -30em;
+    width: 30%;
+  }
+ 
+  .side-image{
+      opacity: .3;
+      filter: blur(.1em)
+  }
+  .section-projects{
+      display: flex;
+      justify-content: center;
+  }
