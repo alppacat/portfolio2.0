@@ -8,6 +8,24 @@ const Skills = (props) => {
     const body = () =>{
         return(
             <div className="console-body-skills">
+                 <section className="mobile-skills">
+                    <div className="mobile-skills-content">
+                    <h3>Desarrollo</h3>
+                    <p>JavaScript, ReactJs, React Native, Firebase, NodeJs, Git/Github, Bulma, CSS, HTML5</p>
+                    </div>
+                    <div className="mobile-skills-content">
+                    <h3>Diseño</h3>
+                    <p>Photoshop, Illustrator, Paint Tool Sai, Figma</p>
+                    </div>
+                    <div className="mobile-skills-content">
+                    <h3>Idiomas</h3>
+                    <p>Español, Inglés, Catalán</p>
+                    </div>
+                    <div className="mobile-skills-content">
+                    <h3>Otros</h3>
+                    <p>Metodología ágil, principios de UX design, investigación social, análisis de datos, pensamiento crítico, escritura.</p>
+                    </div>
+                 </section>
             <section className="section section-skills">
             <div>
             <h3 className="title">Desarrollo</h3>

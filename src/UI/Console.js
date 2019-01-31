@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const Console = (props) => {
     return(
-        <section className="section">
+        <section className="section console-section">
             <div id="console" className="container">
             <div id="nav-console" >
                 <div className="level options-colors">
