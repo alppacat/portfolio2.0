@@ -1,6 +1,6 @@
 #desktop{
     background-color: #3A1D45;
-    height: 100vh;
+    height: 94vh;
 }
 
 #console{
@@ -59,6 +59,7 @@ p.level-right.console-x:hover{
 }
 .console-body-skills{
     display: flex;
+    justify-content: center;
 }
 h3.title{
     font-family: VT323,monospace;
@@ -97,6 +98,9 @@ ul a:hover{
     margin-left: 1em;
     margin-top: 1em;
 }
+#desktop-icons:hover{
+    cursor: pointer;
+}
 figure.desktop-icons-content p {
     margin-top: -.5em;
     font-family: VT323,monospace;
@@ -117,19 +121,20 @@ figure.desktop-icons-content {
 }
 .main-project img {
     width: 20%;
+    filter: opacity(.9)
 }
 #projects{
-    position: absolute;
-    z-index: 1;
+    position: initial;
 }
 .container-images{
     text-align: center;
 }
 
 .container-projects-info{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     max-width: 50%;
-    height: 13em;
     background-color: #18181C;
     color: #008b68;
     border: 2px solid #d6d6d6;
@@ -137,6 +142,7 @@ figure.desktop-icons-content {
     padding: 1.2em;
 }
 .container-projects-info h3{
+    margin-top: -.5em;
     font-family: VT323,monospace;
     font-size: 2em;
     color: #00bfa8;
@@ -218,3 +224,94 @@ figure.desktop-icons-content {
       display: flex;
       justify-content: center;
   }
+
+  .close-project{
+      position: absolute;
+      margin: -.5em;
+      font-size: 1.5em;
+  }
+
+  .close-project:hover{
+    cursor: pointer;
+    font-size: 1.6em;
+  }
+  @media (max-width: 359px){
+      #console{
+          width: 100%
+      }
+    .console-body h1{
+        font-size: 3em;
+    }
+    .console-body-about {
+        margin-top: -2.9em;
+    }
+    .console-body-about p {
+        font-size: .7em;
+    }
+}
+
+.navbar-desktop{
+    height: 6vh;
+    background-color: #761456;
+}
+.press-navbar {
+    text-align: center;
+    background-image: -webkit-linear-gradient(bottom,#e3b943,#e3ca4b,#e2dc56,#deed63,#d9ff74);
+    background-image: linear-gradient(0deg,#e3b943,#e3ca4b,#e2dc56,#deed63,#d9ff74);
+    font-family: VT323,monospace;
+    text-shadow: 2px 2px #00bfa8;
+    color: #3f1942;
+    font-size: 1.3em;
+    width: 6em;
+    padding: .2em;
+}
+.press-navbar:hover{
+    cursor: pointer;
+    color: #3f1942;
+    background-image: linear-gradient(
+      to bottom,
+      #e3b943,
+      #e3ca4b,
+      #e2dc56,
+      #deed63,
+      #d9ff74
+    );
+}
+.container-navbar {
+    display: flex;
+}
+.built-with-container {
+    margin: 0px 2em 0 0;
+    color: #008b68;
+}
+.built-with-container i{
+    margin: .5em;
+    font-weight: bold;
+}
+
+.content-dropdown{
+    background-color: #d6d6d6;
+    padding-left: .3em;
+}
+.element-menu{
+    text-decoration: none;
+    color:#008b68;
+    font-size: 1.3em;
+}
+.element-menu:hover{
+    color:#008b68;;
+    font-size: 1.4;
+    font-weight: bold;
+}
+
+.dropdown-item:hover{
+    background-color:#761456;
+    color:#d6d6d6;
+    font-weight: bold;
+
+}
+
+.dropdown.is-up .dropdown-menu{
+    width: 15em;
+    padding-bottom: .3px;
+}

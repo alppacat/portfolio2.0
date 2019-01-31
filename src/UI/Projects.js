@@ -61,8 +61,9 @@ class Projects extends Component {
         return(
             <section className="section-projects">
                 <div className="container-projects-info">
+                <div  onClick={this.props.switch} data-component="Projects" className="level close-project"><div className="level-left"><i className="fas fa-times-circle"></i></div> </div>
                     <h3>{project.name}</h3>
-                    <div>
+                    <div className="project-content">
                         <p>{project.description}</p>
                         <span>Tecnologías implementadas:</span>
                         <p>{project.tecnologias}</p>
@@ -100,8 +101,9 @@ class Projects extends Component {
             </div>
             {this.renderProject()}
 
-                <div className="next-container" onClick={this.slideProjects}>
-                 <p className="next-icon">>></p>
+                <div className="next-container">
+
+                 <p className="next-icon" onClick={this.slideProjects}>>></p>
                  </div>
         </section> );
     }

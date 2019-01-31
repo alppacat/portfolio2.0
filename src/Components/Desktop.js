@@ -4,6 +4,7 @@ import About from '../UI/About';
 import Skills from '../UI/Skills';
 import Contact from '../UI/Contact';
 import Projects from '../UI/Projects';
+import Dropup from '../UI/Dropup';
 import DesktopUI from '../UI/Desktop';
 
 
@@ -11,15 +12,17 @@ class Desktop extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            About:false,
+            About:true,
             Skills:false,
             Contact: false,
-            Projects: true,
+            Projects: false,
+            Dropup:false,
          }
     }
 
     switchComponent = (event) => {
         const component = event.target.getAttribute('data-component')
+        console.log(component)
 
         if(this.state[component]){
             return this.setState({[component]:false})
@@ -55,7 +58,10 @@ class Desktop extends Component {
         }else if(ConsoleType === "Contact"){
             return <Contact switch={this.switchComponent} component={"Contact"}/>
         }else if(ConsoleType === "Projects"){
-            return <Projects switch={this.switchComponent} component={"Contact"}/>
+            return <Projects switch={this.switchComponent} component={"Projects"}/>
+        }
+        else if(ConsoleType == "Dropup"){
+            return <Dropup switch={this.switchComponent} component={"Dropup"}/>
         }
     }
     render() { 

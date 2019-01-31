@@ -1,12 +1,13 @@
 import React from 'react';
 import './Desktop.css'
 
+import Dropup from './Dropup';
 import consoleIcon from '../assets/icons/console_prompt-0.png';
 import folderIcon from '../assets/icons/directory_open_file_mydocs_2k-4.png';
 
 
 const Desktop = (props) => {
-    return(
+    return(<React.Fragment>
         <section id="desktop">
             <div className="container-desktop">
             <section id="desktop-icons">
@@ -29,13 +30,30 @@ const Desktop = (props) => {
                     <p>contact.exe</p>
                 </figure>
                 <figure className="desktop-icons-content">
-                    <img src={folderIcon}/>
+                    <img src={folderIcon}
+                    onClick={props.switch}
+                    data-component="Projects"/>
                     <p>Proyectos</p>
                 </figure>
             </section>
             {props.component}
-            </div>        
+            </div>    
          </section>
+          <section className="navbar-desktop">
+          <div className="level container-navbar">
+          <Dropup switch={props.switch} component={props.component}/>
+          
+          
+            {/* <div className="level-left press-navbar-container">
+                <div className="press-navbar level-item"  data-component="Dropup"
+             onClick={props.switch}>START</div>
+          </div> */}
+              <div className="level-right built-with-container">
+                <p className="level-item">built with {" "} <i className="fab fa-react"></i> {" "} and {" "} <i class="fas fa-heart"></i></p>
+              </div>
+          </div>
+          </section>
+          </React.Fragment>    
     )
 
 }

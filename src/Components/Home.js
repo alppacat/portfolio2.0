@@ -16,7 +16,7 @@ class Home extends Component {
            <section>
                <h2 className="subtitle">Front-end Developer</h2>
                <p id="quote" className="is-size-7-mobile">"Any sufficiently advanced technology is indistinguishable from magic" <br/> -Arthur C. Clarke</p>
-               <a id="press-to-enter">PRESS TO ENTER</a>
+               <a href="#desktop" id="press-to-enter">PRESS TO ENTER</a>
                <p id="scrolldown">or scroll down</p>
            </section>
             )
@@ -24,7 +24,7 @@ class Home extends Component {
     }
     render() { 
         return ( 
-        <section className="home">
+        <section className="home" id="Home">
             <div className="container">
             <h1 className="title title-home"> 
             <Typewriter
