@@ -19,6 +19,14 @@ class Projects extends Component {
 
     }
 
+    modalProject = () => {
+        const query = document.querySelector('.modal');
+        if(document.querySelector('.is-active')){
+            query.classList.remove('is-active');
+          }else{
+            query.classList.add('is-active');
+          }
+    }
     renderProject = () => {
         const mainProject = this.state.projects[1];
 
@@ -60,6 +68,44 @@ class Projects extends Component {
 
         return(
             <section className="section-projects">
+            <div className="projects-mobile">
+            <div className="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+            <header className="modal-card-head">
+            <p className="modal-card-title">{project.name}</p>
+            <button class="delete" aria-label="close" onClick={this.modalProject}></button>
+            </header>
+            <section className="modal-card-body">
+            <div className="project-content">
+                        <p>{project.description}</p>
+                        <span>Tecnologías implementadas:</span>
+                        <p>{project.tecnologias}</p>
+                            <div className="external-links"> 
+                                <a target="_blank" rel="noopener noreferrer" href={project.demo}>
+                                <i className="fas fa-external-link-alt"></i> {" "}
+                                demo
+                                </a>
+                                <a target="_blank" rel="noopener noreferrer" href={project.repositorio}>
+                                <i className="fab fa-github"></i> {" "}
+                                código
+                                </a>
+                            </div>
+                        
+                    </div>  
+                              </section>
+            </div>
+            </div>
+            <div className="container-projects-info">
+                 <div  onClick={this.props.switch} data-component="Projects" className="level close-project"><div className="level-left"><i className="fas fa-times-circle"></i></div> </div>
+                 <h3>{project.name}</h3>
+                 <div className="more-info" onClick={this.modalProject}>
+                     <i className="fas fa-info-circle"></i>
+                 <p>Más info</p>
+                 </div>
+                 </div>
+            </div>
+            <div className="projects-desktop" >
                 <div className="container-projects-info">
                 <div  onClick={this.props.switch} data-component="Projects" className="level close-project"><div className="level-left"><i className="fas fa-times-circle"></i></div> </div>
                     <h3>{project.name}</h3>
@@ -79,6 +125,7 @@ class Projects extends Component {
                             </div>
                         
                     </div>
+                </div>
                 </div>
             </section>
         )

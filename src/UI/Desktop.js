@@ -37,22 +37,16 @@ const Desktop = (props) => {
                 </figure>
             </section>
             {props.component}
-            </div>    
-         </section>
-          <section className="navbar-desktop">
+            </div>
+            <section className="navbar-desktop">
           <div className="level container-navbar">
           <Dropup switch={props.switch} component={props.component}/>
-          
-          
-            {/* <div className="level-left press-navbar-container">
-                <div className="press-navbar level-item"  data-component="Dropup"
-             onClick={props.switch}>START</div>
-          </div> */}
               <div className="level-right built-with-container">
                 <p className="level-item">built with {" "} <i className="fab fa-react"></i> {" "} and {" "} <i class="fas fa-heart"></i></p>
               </div>
           </div>
-          </section>
+          </section>    
+         </section>
           </React.Fragment>    
     )
 

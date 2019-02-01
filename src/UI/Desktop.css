@@ -8,6 +8,7 @@
     width: 50%;
     border: 2px solid #d6d6d6;
     border-radius: 15px 15px 15px 15px;
+    box-shadow: 0.5em 0.5em 15px 9px #0000004a;
 }
 #nav-console {
     background-color: #d6d6d6;
@@ -111,6 +112,7 @@ figure.desktop-icons-content {
 }
 .container-desktop{
     margin:0;
+    height: 100%;
 }
 .container-projects{
     display: flex;
@@ -131,6 +133,7 @@ figure.desktop-icons-content {
 }
 
 .container-projects-info{
+    box-shadow: 0.5em 0.5em 15px 9px #0000004a;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -235,7 +238,9 @@ figure.desktop-icons-content {
     cursor: pointer;
     font-size: 1.6em;
   }
-  @media (max-width: 359px){
+
+ 
+  @media (max-width: 360px){
       #console{
           width: 100%
       }
@@ -246,7 +251,7 @@ figure.desktop-icons-content {
         margin-top: -2.9em;
     }
     .console-body-about p {
-        font-size: .7em;
+        font-size: .9em;
     }
 }
 
@@ -255,7 +260,9 @@ figure.desktop-icons-content {
     background-color: #761456;
 }
 .press-navbar {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: -webkit-linear-gradient(bottom,#e3b943,#e3ca4b,#e2dc56,#deed63,#d9ff74);
     background-image: linear-gradient(0deg,#e3b943,#e3ca4b,#e2dc56,#deed63,#d9ff74);
     font-family: VT323,monospace;
@@ -264,6 +271,7 @@ figure.desktop-icons-content {
     font-size: 1.3em;
     width: 6em;
     padding: .2em;
+    height: 100%;
 }
 .press-navbar:hover{
     cursor: pointer;
@@ -279,6 +287,7 @@ figure.desktop-icons-content {
 }
 .container-navbar {
     display: flex;
+    height: 100%;
 }
 .built-with-container {
     margin: 0px 2em 0 0;
@@ -311,12 +320,45 @@ figure.desktop-icons-content {
 
 }
 
+.dropdown{
+    height: 100%;
+}
+
 .dropdown.is-up .dropdown-menu{
     width: 15em;
     padding-bottom: .3px;
 }
 .mobile-skills{
     display: none;
+}
+.projects-mobile{
+    display: none;
+}
+.projects-desktop {
+    display: flex;
+    justify-content: center;
+}
+ .modal-card-body{
+    background-color: #18181C !important;
+    border: 1px solid #dbdbdb;
+    color: #008b68 !important;
+}
+.modal-card-title{
+    color: #008b68;
+    font-family: VT323,monospace;
+}
+.delete{
+    background-color: #008b68;
+}
+.modal-card-body span{
+    color:#00bfa8;
+}
+.modal-card-body p{
+    text-align: justify;
+    margin: .5em;
+}
+.modal-background {
+    background-color: rgba(10, 10, 10, 0.5);
 }
 @media (min-width: 320px) and (max-width: 480px){
     #console{
@@ -337,7 +379,7 @@ figure.desktop-icons-content {
 @media (min-width: 320px) and (max-width: 480px){
     #console{
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
     .options-colors{
         display: flex;
@@ -359,8 +401,8 @@ figure.desktop-icons-content {
         padding: .1em;
     }
     .console-body-about {
-        margin: -1em;
-        font-size: 1.2em;
+        margin: -1.9em;
+        /* font-size: 1.2em; */
     }
     .section-skills h3{
         font-size: .5em;
@@ -380,5 +422,61 @@ figure.desktop-icons-content {
         font-size: 1.2em;
         color: #00bfa8;
         font-weight: 500;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 415px){
+    #console{
+        height: 75%;
+    }
+}
+@media (min-width: 411px){
+    .mobile-skills{
+        font-size: 1.1em;
+    }
+    .mobile-skills-content p{
+        font-size: .8em;
+    }
+}
+@media (min-width: 320px) and (max-width: 415px){
+    .projects-desktop{
+    display: none;
+    }
+    .container-projects-info{
+        max-width: 100%;
+        width: 16em;
+    }
+    .container-projects-info h3{
+        font-size: 1.5em;
+    }
+    .projects-mobile{
+        display: flex;
+    }
+    .side-project-left{
+        display: none;
+    }
+    .side-project-right{
+        display: none;
+    }
+    .main-project img {
+        width: 90%;
+    }
+    .section-projects{
+        margin-top: -2.5em;
+    }
+    .next-container{
+        margin-top: -1em;
+        font-size: .7em;
+    }
+    .more-info {
+        font-size: 1.6em;
+    }
+    .more-info p{
+        font-size: .5em;
+        margin-top: 0;
+    }
+
+    .console-body-contact{
+        font-size: .9em;
     }
 }
