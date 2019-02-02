@@ -70,11 +70,11 @@ class Projects extends Component {
             <section className="section-projects">
             <div className="projects-mobile">
             <div className="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
+            <div className="modal-background"></div>
+            <div className="modal-card">
             <header className="modal-card-head">
             <p className="modal-card-title">{project.name}</p>
-            <button class="delete" aria-label="close" onClick={this.modalProject}></button>
+            <button className="delete" aria-label="close" onClick={this.modalProject}></button>
             </header>
             <section className="modal-card-body">
             <div className="project-content">

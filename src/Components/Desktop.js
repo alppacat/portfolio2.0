@@ -4,7 +4,8 @@ import About from '../UI/About';
 import Skills from '../UI/Skills';
 import Contact from '../UI/Contact';
 import Projects from '../UI/Projects';
-import Dropup from '../UI/Dropup';
+import Resume from '../UI/Resume';
+
 import DesktopUI from '../UI/Desktop';
 
 
@@ -16,7 +17,7 @@ class Desktop extends Component {
             Skills:false,
             Contact: false,
             Projects: false,
-            Dropup:false,
+            Resume: false,
          }
     }
 
@@ -49,6 +50,16 @@ class Desktop extends Component {
         }
     }
 
+    resume = () => {
+        if(!this.state.Resume){
+        this.setState({Resume:true})
+        }else{
+            const query =  document.querySelector('.delete');
+            query.classList.remove('is-active');
+            this.setState({Resume:false})
+        }
+    }
+
     getConsoleType = () => {
         const ConsoleType = this.checkWindow()
         if(ConsoleType === "About"){
@@ -60,14 +71,14 @@ class Desktop extends Component {
         }else if(ConsoleType === "Projects"){
             return <Projects switch={this.switchComponent} component={"Projects"}/>
         }
-        else if(ConsoleType == "Dropup"){
-            return <Dropup switch={this.switchComponent} component={"Dropup"}/>
-        }
     }
     render() { 
 
         return (<React.Fragment>
-            <DesktopUI component={this.getConsoleType()} switch={this.switchComponent}/>
+            <DesktopUI component={this.getConsoleType()} 
+            resume={this.resume}
+            resumeStatus={this.state.Resume}
+            switch={this.switchComponent}/>
         </React.Fragment>  );
     }
 }
