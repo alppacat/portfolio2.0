@@ -162,6 +162,14 @@ figure.desktop-icons-content {
     margin: 1em;
 }
 
+section.section.section-skills {
+    padding-top: 0;
+    padding-bottom: 0.9em;
+}
+section.section.section-skills h3 {
+    font-size: 1.2em;
+}
+
 .next-container{
     display: flex;
     justify-content: center;
