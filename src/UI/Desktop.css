@@ -337,6 +337,7 @@ figure.desktop-icons-content {
 .projects-desktop {
     display: flex;
     justify-content: center;
+    margin-top: -2.1em;
 }
  .modal-card-body{
     background-color: #18181C !important;
